@@ -10,13 +10,13 @@ dbname = 'sensors'
 
 def insert_to_influx(client):
                     json_body = [ {
-                       "measurement": "humidity",
+                       "measurement": "Temperature",
                        "tags":{
                           "device_id": "6c89f539-71c6-490d-a28d-6c5d84c0ee2f",
-                          "device_name": device},
-                       "time": data['timestamp'],
+                          "device_name": "device1"},
+                       "time": "1610467532",
                        "fields": {
-                       "value": float(data['value']['humidity'])
+                       "value": "8")
                                 }
                           }
                            ]
