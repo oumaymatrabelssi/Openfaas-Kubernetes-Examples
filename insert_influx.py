@@ -26,14 +26,6 @@ def insert_to_influx(client):
 
 
 
-def handle(req):
-    """handle a request to the function
-    Args:
-        req (str): request body
-    """
-    client = InfluxDBClient(host, port, user, password, dbname)
-    print("waiting to receive messages")
-    # start the proton Container event loop with the DTEConsumer event handler
-    return client
-
-handle("")
+client = InfluxDBClient(host, port, user, password, dbname)
+print("waiting to receive messages")
+print(client)
